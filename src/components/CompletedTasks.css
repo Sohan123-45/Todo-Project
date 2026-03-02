@@ -1,0 +1,132 @@
+/* ===== Columns ===== */
+.completed {
+  flex: 1;
+  min-width: 260px;
+  max-width: 380px;
+  padding: 18px;
+  border-radius: 14px;
+  background: #ffffff;
+  border: 1px solid #e3e8ef;
+}
+
+/* Titles */
+.completed::before {
+  display: block;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 14px;
+}
+
+.completed::before { content: "Completed"; color: #16a34a; }
+
+/* ===== Task Rows ===== */
+.completed div {
+  display: grid;
+  grid-template-columns: auto auto 1fr auto;
+  gap: 8px;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  background: #f9fafb;
+  border: 1px solid #eef2f7;
+  transition: 0.15s ease;
+}
+
+.completed div {
+  opacity: 0.85;
+}
+
+.completed div:hover {
+  background: #ecfdf3;
+}
+
+/* Task text */
+span {
+  font-size: 14px;
+  word-break: break-word;
+}
+
+/* ===== Buttons ===== */
+.btn-delete,
+.btn-back {
+  padding: 5px 9px;
+  font-size: 12px;
+  border: none;
+  background: transparent;
+}
+
+/* delete – muted red */
+.btn-delete {
+  border-color: #f2b8b5;
+  color: #b42318;
+}
+
+.btn-delete:hover {
+  transform: scale(1.1);
+  background: #fff1f1;
+}
+
+/* back – neutral */
+.btn-back {
+  margin-top: 1px;
+  color: #475569;
+}
+
+.btn-back:hover, .btn-edit:hover {
+  background-color: #ecfdf37c;
+  transform: scale(1.1);
+}
+
+.arrow-left{
+    height: 14px;
+    background: #ecfdf3;
+}
+.delete{
+    height: 17px;
+    margin-top: 3px;
+}
+
+/* ==== Mobile ==== */
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.completed div {
+  animation: slideIn 0.18s ease-out;
+}
+
+
+.completed span {
+  text-decoration: line-through;
+  color: #64748b;
+}
+
+
+.completed div {
+  background: #f0fdf4;
+  border-color: #dcfce7;
+}
+
+.btn-back:active,
+.btn-delete:active {
+  transform: scale(0.92);
+}
+
+button:focus-visible,
+input:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59,130,246,0.2);
+}
+
+.completed div:hover {
+  transform: translateY(-1px);
+}

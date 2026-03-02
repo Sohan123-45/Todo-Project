@@ -1,0 +1,183 @@
+/* Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px; /* prevents overflow on small screens */
+  z-index: 1000;
+}
+
+/* Modal */
+.modal {
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 12px;
+  width: 100%;
+  /* max-width: 100%; */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  animation: fadeIn 0.25s ease-in-out;
+}
+
+/* Title */
+.modal h3 {
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+/* Form */
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #555;
+}
+
+/* Existing task */
+.existing {
+  background: #f5f7fa;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+/* Input */
+.modal input {
+  width: 100%;
+  padding: 11px 14px;
+  border-radius: 8px;
+  border: 1px solid #dcdcdc;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+.modal input:focus {
+  outline: none;
+  border-color: #4f7cff;
+  box-shadow: 0 0 0 2px rgba(79,124,255,0.15);
+}
+
+/* Buttons */
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.btn-save {
+  background: #4f7cff;
+  color: white;
+  border: none;
+  padding: 9px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn-save:hover {
+  background: #3c64d8;
+}
+
+.btn-cancel {
+  background: #f1f3f6;
+  border: none;
+  padding: 9px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-cancel:hover {
+  background: #e3e7ee;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    transform: translateY(-15px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+/* ========================= */
+/* 📱 Mobile (small phones) */
+/* ========================= */
+@media (max-width: 480px) {
+
+  .modal {
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .modal h3 {
+    font-size: 18px;
+  }
+
+  .existing {
+    font-size: 13px;
+  }
+
+  .modal input {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  /* Stack buttons vertically */
+  .modal-actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .btn-save,
+  .btn-cancel {
+    width: 100%;
+  }
+}
+
+
+/* ========================= */
+/* 📱 Tablets */
+/* ========================= */
+@media (min-width: 481px) and (max-width: 768px) {
+
+  .modal {
+    width: 90%;
+    padding: 24px;
+  }
+
+  .modal h3 {
+    font-size: 19px;
+  }
+}
+
+
+/* ========================= */
+/* 💻 Large screens */
+/* ========================= */
+@media (min-width: 1200px) {
+
+  .modal {
+    width: 460px;
+    padding: 32px;
+  }
+
+  .modal h3 {
+    font-size: 22px;
+  }
+}

@@ -1,0 +1,148 @@
+/* ===== Columns ===== */
+.active {
+  flex: 1;
+  min-width: 260px;
+  max-width: 380px;
+  padding: 18px;
+  border-radius: 14px;
+  background: #ffffff;
+  border: 1px solid #e3e8ef;
+}
+
+/* Titles */
+.active::before{
+  display: block;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 14px;
+}
+
+.active::before { content: "Active"; color: #2563eb; }
+
+/* ===== Task Rows ===== */
+.active div {
+  display: grid;
+  grid-template-columns: auto auto 1fr auto auto;
+  gap: 8px;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  background: #f9fafb;
+  border: 1px solid #eef2f7;
+  transition: 0.15s ease;
+}
+
+.active div:hover {
+  background: #eef4ff;
+}
+
+/* Task text */
+span {
+  font-size: 14px;
+  word-break: break-word;
+}
+
+/* ===== Buttons ===== */
+.btn-delete,
+.btn-back,
+.btn-front {
+
+  padding: 5px 5px;
+  font-size: 12px;
+  border: none;
+  background: transparent;
+}
+
+/* delete – muted red */
+.btn-delete {
+  border-color: #f2b8b5;
+  color: #b42318;
+}
+
+.btn-delete:hover {
+  background: #fff1f1;
+  transform: scale(1.1);
+}
+
+/* back – neutral */
+.btn-back {
+  margin-top: 1px;
+  border-color: #cfd8e3;
+  color: #475569;
+}
+
+.btn-back:hover {
+  background: #f1f5f9;
+  transform: scale(1.1);
+}
+
+/* front – subtle blue/green */
+
+.btn-front:hover:hover {
+  background: #dbeafe;
+  transform: scale(1.1);
+}
+.btn-edit:hover{
+  background-color: #ecfdf3;
+  transform: scale(1.1);
+}
+
+.delete{
+    height: 17px;
+    margin-top: 3px;
+}
+.arrow-right{
+    height: 17px;
+}
+.arrow-left{
+    height: 14px;
+}
+
+/* ===== Scroll ===== */
+.active {
+  max-height: 380px;
+  overflow-y: auto;
+}
+
+.active::-webkit-scrollbar {
+  width: 4px;
+}
+
+.active::-webkit-scrollbar-thumb{
+  background: #c7d2fe;
+  border-radius: 10px;
+}
+
+/* ==== Mobile ==== */
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.active div {
+  animation: slideIn 0.18s ease-out;
+}
+
+.btn-front:active,
+.btn-back:active,
+.btn-delete:active {
+  transform: scale(0.92);
+}
+
+button:focus-visible,
+input:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59,130,246,0.2);
+}
+
+.active div:hover{
+  transform: translateY(-1px);
+}

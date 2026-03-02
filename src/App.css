@@ -1,0 +1,116 @@
+/* ===== Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: #f1f3f6;
+  color: #1f2933;
+  padding: 32px;
+}
+
+/* ===== Input ===== */
+input {
+  width: 65%;
+  max-width: 440px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #cfd8e3;
+  font-size: 15px;
+  outline: none;
+  background: #fff;
+  transition: 0.2s ease;
+}
+
+input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59,130,246,0.15);
+}
+
+button {
+  padding: 10px 14px;
+  margin-left: 8px;
+  border-radius: 10px;
+  border: 1px solid #cfd8e3;
+  background: #ffffff;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.15s ease;
+  color: #1f2933;
+}
+
+button:hover {
+  background: #f0f4f8;
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+/* ===== Layout ===== */
+.totalTasks {
+  display: flex;
+  gap: 18px;
+  margin-top: 30px;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 768px) {
+  input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  button {
+    width: 100%;
+    margin: 6px 0 0;
+  }
+
+  .totalTasks {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* ===== Search Bar ===== */
+.search-wrapper {
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 360px;
+  padding: 12px 16px 12px 40px;
+  border-radius: 999px;
+  border: 1px solid #dbe2ea;
+  font-size: 14px;
+  background: #ffffff;
+  transition: 0.2s ease;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2394a3b8'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M21 21l-4.35-4.35m0 0A7.5 7.5 0 103.9 3.9a7.5 7.5 0 0012.75 12.75z' /%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 18px;
+  background-position: 14px center;
+}
+
+.search-input::placeholder {
+  color: #94a3b8;
+}
+
+.search-input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99,102,241,0.2);
+}
+
+@media (max-width: 768px) {
+  .search-input {
+    flex: 1; 
+  }
+}
