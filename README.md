@@ -12,7 +12,6 @@ A feature-rich Todo application built with **React** and **Vite**. This project 
 - **Search Capabilities**: Find specific tasks quickly using the built-in search bar.
 - **Edit/Delete**: Update existing tasks or remove them entirely.
 - **Local Storage Persistence**: Your tasks are saved locally, meaning you won't lose your data when you refresh or close the browser.
-- **Theme Toggle**: Switch between different modes (using the ModeToggle component).
 
 ## 🚀 Tech Stack
 
