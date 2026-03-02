@@ -31,8 +31,7 @@ todo-project/
 │   │   ├── AddTaskWrapper  # Form to add new tasks
 │   │   ├── AllTasks        # Component to list all tasks
 │   │   ├── CompletedTasks  # Component for completed tasks
-│   │   ├── EditTask        # Component for editing a task
-│   │   └── ModeToggle      # Theme toggler component
+│   │   └── EditTask        # Component for editing a task
 │   ├── btn-functions/      # Button helper functions
 │   │   ├── backTask.jsx
 │   │   └── frontTask.jsx
